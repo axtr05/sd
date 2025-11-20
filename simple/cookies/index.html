@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Session Tracking</title>
+    </head>
+    <body>
+        <h2>Session Tracking</h2>
+        <p>Session ID: <span id = "sid"></span></p>
+        <p>creation time: <span id = "ct"></span></p>
+        <p>last access time: <span id = "lt"></span></p>
+        <p>you have accessed the page: <span id = "c"></span> times</p>
+        <script>
+            let sid = sessionStorage.getItem("sid");
+            let ct = sessionStorage.getItem("ct");
+            let c = sessionStorage.getItem("c");
+            if(!sid){
+                sid = Math.random(6);
+                ct = new Date().toLocaleString();
+                c = 0;
+            }
+            c = parseInt(c) + 1;
+            const lt = new Date().toLocaleString();
+            sessionStorage.setItem("sid", sid);
+            sessionStorage.setItem("ct", ct);
+            sessionStorage.setItem("c", c);
+            document.getElementById("sid").innerText = sid;
+            document.getElementById("ct").innerText = ct;
+            document.getElementById("lt").innerText = lt;
+            document.getElementById("c").innerText = c;
+        </script>
+
+    </body>
+</html>

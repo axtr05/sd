@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+    <book>
+        <title>great sage</title>
+        <author>axtr</author>
+        <price>19.99</price>
+    </book>
+</bookstore>

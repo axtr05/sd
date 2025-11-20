@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Weather App</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h1>Weather app</h1>
+        <canvas id = "chart"></canvas>
+        <script>
+            const apiKey = "1b049fbd90da4d1eaa689aaff29e4567";
+            const city = "London";
+            async function weather(city){
+                try{
+                    const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
+                    const data = await res.json();
+                    const labels = data.list.slice(0,5).map(e => e.dt_txt);
+                    const temp = data.list.slice(0,5).map(e => e.main.temp);
+                    new Chart(document.getElementById('chart'), {
+                        type: "line",
+                            data: {labels, datasets:[{label: "temp(C)", data: temp,borderColor: "blue",fill: false}]}
+                    });
+                } catch(err){
+                    console.error(err);
+                }
+            }
+            weather(city);
+        </script>
+    </body>
+</html>
