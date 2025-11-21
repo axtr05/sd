@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping cart</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <header>    
+        <nav>
+            <ul>
+                <li><a href="index.html">Catalog</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>   
+    <main>
+        <section class = "catalog"></section>
+        <aside class="cart">
+            <h2>Shopping cart</h2>
+            <div  class = "cart-item"></div>
+            <div class = "cart-summary">
+                <p>Total: $<span id = "ttl amt">0.00</span></p>
+                <button onclick = "checkout()">checkout</button>
+            </div>
+        </aside>
+    </main>
+    <script src = "script.js"></script>
+</body>
+</html>

@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export default function App() {
   return (
     <BrowserRouter>
-      <nav style={{ padding: 10 }}>
-        <Link to="/">Login</Link> |{" "}
-        <Link to="/register">Register</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
+      <nav>
+        <Link to="/">Login</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>
 
