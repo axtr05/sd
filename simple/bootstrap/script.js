@@ -33,4 +33,3 @@ function checkout() {
 
 window.onload = displayCatalog;
 
-// ------------------ Client-Side Validation ------------------ //
